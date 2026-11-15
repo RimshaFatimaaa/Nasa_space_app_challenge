@@ -6,9 +6,7 @@ Beyond Earth is a student project. It is not an official NASA website. It does n
 
 ## Demo
 
-[Watch the screen recording](assets/screen_recording.mp4)
-
-<video src="assets/screen_recording.mp4" controls width="100%"></video>
+https://github.com/user-attachments/assets/eff19bef-919d-41e7-adbb-3c362794044a
 
 ## Features
 
