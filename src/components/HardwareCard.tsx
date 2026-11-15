@@ -10,8 +10,7 @@ function firstSentence(text: string) {
 export function HardwareCard({ hardware, index }: { hardware: Hardware; index?: number }) {
   const photo = hardware.images[0];
   return (
-    <article className="exhibit-card overflow-hidden rounded-3xl border border-white/10">
-      <Link href={`/hardware/${hardware.id}`} className="block h-full">
+    <Link href={`/hardware/${hardware.id}`} className="exhibit-card block h-full cursor-pointer overflow-hidden rounded-3xl border border-white/10">
         <div className="relative aspect-[16/10] bg-space-2">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
@@ -37,7 +36,6 @@ export function HardwareCard({ hardware, index }: { hardware: Hardware; index?: 
           <p className="text-sm leading-6 text-star/90">{firstSentence(hardware.overview)}</p>
           <p className="text-sm font-medium text-cyan">Read more</p>
         </div>
-      </Link>
-    </article>
+    </Link>
   );
 }

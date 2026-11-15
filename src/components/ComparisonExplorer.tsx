@@ -39,41 +39,35 @@ export function ComparisonExplorer() {
       </div>
       <p className="text-card max-w-3xl rounded-3xl border border-white/10 p-5 text-base leading-7 text-silver">{preset.summary}</p>
       <div className={`grid gap-4 ${preset.columns.length > 2 ? "lg:grid-cols-3" : "lg:grid-cols-2"}`}>
-        {preset.columns.map((column) => (
-          <article key={column.name} className="exhibit-card rounded-3xl border border-white/10 p-4">
-            {column.image ? (
-              <figure className="mb-4">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={column.image.src}
-                  alt={column.image.alt}
-                  className="aspect-[16/9] w-full rounded-2xl object-cover"
-                  referrerPolicy="no-referrer"
-                />
-                <figcaption className="mt-2 text-xs text-silver">
-                  {column.image.nasaId ? (
-                    <a
-                      className="text-cyan underline-offset-2 hover:underline"
-                      href={`https://images.nasa.gov/details/${column.image.nasaId}`}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      {column.image.credit}
-                    </a>
-                  ) : (
-                    column.image.credit
-                  )}
-                </figcaption>
-              </figure>
-            ) : null}
-            <h3 className="font-display text-2xl">{column.name}</h3>
-            {column.href ? (
-              <Link href={column.href} className="text-sm text-cyan">
-                Open profile
-              </Link>
-            ) : null}
-          </article>
-        ))}
+        {preset.columns.map((column) => {
+          const body = (
+            <>
+              {column.image ? (
+                <figure className="mb-4">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={column.image.src}
+                    alt={column.image.alt}
+                    className="aspect-[16/9] w-full rounded-2xl object-cover"
+                    referrerPolicy="no-referrer"
+                  />
+                  <figcaption className="mt-2 text-xs text-silver">{column.image.credit}</figcaption>
+                </figure>
+              ) : null}
+              <h3 className="font-display text-2xl">{column.name}</h3>
+              <p className="text-sm font-medium text-cyan">Open profile</p>
+            </>
+          );
+          return column.href ? (
+            <Link key={column.name} href={column.href} className="exhibit-card block cursor-pointer rounded-3xl border border-white/10 p-4">
+              {body}
+            </Link>
+          ) : (
+            <article key={column.name} className="exhibit-card rounded-3xl border border-white/10 p-4">
+              {body}
+            </article>
+          );
+        })}
       </div>
       <p className="text-sm text-silver sm:hidden">Swipe the table sideways to see every column.</p>
       <div className="text-card overflow-x-auto rounded-3xl border border-white/10">
@@ -84,7 +78,13 @@ export function ComparisonExplorer() {
               <th scope="col" className="px-4 py-3 font-medium text-silver">Attribute</th>
               {preset.columns.map((column) => (
                 <th key={column.name} scope="col" className="px-4 py-3 font-display text-base text-star">
-                  {column.name}
+                  {column.href ? (
+                    <Link href={column.href} className="text-cyan underline-offset-2 hover:underline">
+                      {column.name}
+                    </Link>
+                  ) : (
+                    column.name
+                  )}
                 </th>
               ))}
             </tr>

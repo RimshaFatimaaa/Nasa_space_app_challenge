@@ -35,14 +35,27 @@ export function TimelineList() {
               </div>
               {event.image ? (
                 <figure>
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={event.image.src}
-                    alt={event.image.alt}
-                    className="aspect-[4/3] w-full rounded-2xl object-cover"
-                    loading="lazy"
-                    referrerPolicy="no-referrer"
-                  />
+                  {event.hardwareId ? (
+                    <Link href={`/hardware/${event.hardwareId}`} className="block">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={event.image.src}
+                        alt={event.image.alt}
+                        className="aspect-[4/3] w-full rounded-2xl object-cover"
+                        loading="lazy"
+                        referrerPolicy="no-referrer"
+                      />
+                    </Link>
+                  ) : (
+                    /* eslint-disable-next-line @next/next/no-img-element */
+                    <img
+                      src={event.image.src}
+                      alt={event.image.alt}
+                      className="aspect-[4/3] w-full rounded-2xl object-cover"
+                      loading="lazy"
+                      referrerPolicy="no-referrer"
+                    />
+                  )}
                   <figcaption className="mt-2 text-xs text-silver">{event.image.credit}</figcaption>
                 </figure>
               ) : null}

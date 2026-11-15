@@ -110,9 +110,14 @@ export default function HomePage() {
         </div>
         <ol className="mt-6 grid gap-4 md:grid-cols-4">
           {preview.map((event) => (
-            <li key={event.id} className="text-card rounded-3xl border border-white/10 p-4">
-              <p className="font-display text-cyan">{event.year}</p>
-              <p className="mt-2 font-display text-xl leading-tight">{event.title}</p>
+            <li key={event.id}>
+              <Link
+                href={event.hardwareId ? `/hardware/${event.hardwareId}` : "/timeline"}
+                className="text-card block cursor-pointer rounded-3xl border border-white/10 p-4"
+              >
+                <p className="font-display text-cyan">{event.year}</p>
+                <p className="mt-2 font-display text-xl leading-tight">{event.title}</p>
+              </Link>
             </li>
           ))}
         </ol>
