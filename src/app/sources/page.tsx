@@ -26,7 +26,7 @@ const groups = [
       ["The Apollo experiment that keeps on giving", "https://www.nasa.gov/missions/apollo/apollo-11/the-apollo-experiment-that-keeps-on-giving/"],
       ["Apollo 11 retroreflector, NASA GSFC", "https://ilrs.gsfc.nasa.gov/missions/satellite_missions/current_missions/ap11_general.html"],
       ["Lunar Roving Vehicle, NASA NSSDC", "https://nssdc.gsfc.nasa.gov/planetary/lunar/apollo_lrv.html"],
-      ["NASA Science — first wheeled vehicle on the Moon, Lunokhod 1", "https://science.nasa.gov/deep-space-exploration/"],
+      ["NASA Science — Lunokhod 1, first wheeled vehicle on the Moon, November 17, 1970", "https://science.nasa.gov/image-article/apod-1997-april-20-moon-robot-lunokhod-1/"],
       ["ALSEP history, NASA NTRS", "https://ntrs.nasa.gov/api/citations/20180008613/downloads/20180008613.pdf"],
       ["ALSEP termination report, NASA NTRS", "https://ntrs.nasa.gov/api/citations/19790014808/downloads/19790014808.pdf"],
       ["Planetary Data System — Apollo collections", "https://pds-geosciences.wustl.edu/missions/apollo/"],
@@ -69,6 +69,7 @@ export default function SourcesPage() {
         <p className="leading-7">
           Apollo surface photographs are credited to NASA. Mars rover photographs are credited to NASA/JPL or NASA/JPL-Caltech, and camera-team images also name Malin Space Science Systems where that is the library credit. Each photo caption links to its NASA Image Library record. If a picture fails to load, the page says so and keeps the credit.
         </p>
+        <p className="leading-7">The anatomy diagrams are AI-generated illustrations.</p>
         <p className="leading-7">
           The rover and lunar-module diagrams are SVG drawings. An AI coding assistant wrote the code that draws them. They are teaching sketches, not NASA engineering drawings, not photographs, and not pictures from an image generator.
         </p>

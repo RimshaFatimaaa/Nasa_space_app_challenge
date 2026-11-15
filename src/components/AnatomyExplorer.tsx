@@ -3,6 +3,17 @@
 import { getAnatomy } from "@/data/anatomy";
 import { useMemo, useState } from "react";
 
+function AiDiagramTag() {
+  return (
+    <g>
+      <rect x="20" y="16" width="268" height="40" rx="20" fill="#071426" stroke="#e6c98a" strokeWidth="2" />
+      <text x="154" y="42" textAnchor="middle" fill="#e6c98a" fontSize="18" fontFamily="sans-serif" fontWeight="700">
+        AI-generated diagram
+      </text>
+    </g>
+  );
+}
+
 function Wheel({ cx, cy, r, color }: { cx: number; cy: number; r: number; color: string }) {
   return (
     <g>
@@ -16,8 +27,9 @@ function RoverDrawing({ selected, nuclear }: { selected: string; nuclear: boolea
   const glow = (id: string) => (selected === id ? "#54C7E8" : "#C8D0D9");
   const panel = glow("power");
   return (
-    <svg viewBox="0 0 720 380" role="img" aria-label="Simplified three-quarter view of a six-wheeled Mars rover" className="h-auto w-full">
+    <svg viewBox="0 0 720 380" role="img" aria-label="AI-generated diagram. Simplified three-quarter view of a six-wheeled Mars rover" className="h-auto w-full">
       <rect width="720" height="380" fill="#0c1e36" rx="24" />
+      <AiDiagramTag />
       <path d="M36 318 H684" stroke="#12365A" strokeWidth="4" />
       <path d="M210 188 L250 150 H500 L530 188 Z" fill="#10243f" stroke={glow("body")} strokeWidth="4" />
       <rect x="210" y="188" width="320" height="72" rx="10" fill="#12365A" stroke={glow("body")} strokeWidth="4" />
@@ -61,8 +73,9 @@ function RoverDrawing({ selected, nuclear }: { selected: string; nuclear: boolea
 function LanderDrawing({ selected }: { selected: string }) {
   const glow = (id: string) => (selected === id ? "#54C7E8" : "#C8D0D9");
   return (
-    <svg viewBox="0 0 640 340" role="img" aria-label="Simplified Apollo lunar module" className="h-auto w-full">
+    <svg viewBox="0 0 640 340" role="img" aria-label="AI-generated diagram. Simplified Apollo lunar module" className="h-auto w-full">
       <rect width="640" height="340" fill="#0c1e36" rx="24" />
+      <AiDiagramTag />
       <path d="M70 280 H570" stroke="#12365A" strokeWidth="4" />
       <path d="M230 230 L180 270 H250" fill="none" stroke={glow("legs")} strokeWidth="5" />
       <path d="M410 230 L460 270 H390" fill="none" stroke={glow("legs")} strokeWidth="5" />

@@ -29,7 +29,8 @@ export function SiteFooter() {
           </ul>
         </div>
       </div>
-      <p className="border-t border-white/10 px-4 py-4 text-center text-xs text-silver/80">
+      <p className="border-t border-white/10 px-4 pt-4 text-center text-sm text-silver">Made by Rimsha Fatima</p>
+      <p className="px-4 py-4 text-center text-xs text-silver/80">
         An educational NASA Space Apps project. Not an official NASA website. Student explanations are simplified. The linked NASA pages are the record.
       </p>
     </footer>
