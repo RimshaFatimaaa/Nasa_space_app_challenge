@@ -4,6 +4,10 @@ An educational exhibit about the machines NASA left on the Moon and Mars. Studen
 
 Beyond Earth is a student project. It is not an official NASA website. It does not use the NASA logo, the NASA flag, or altered mission patches. Photographs are NASA images. Deep-space probes such as Voyager are not part of the exhibit.
 
+## Live site
+
+The exhibit is deployed at [https://nasaspaceappchallenge-rho.vercel.app/](https://nasaspaceappchallenge-rho.vercel.app/).
+
 ## Demo
 
 https://github.com/user-attachments/assets/eff19bef-919d-41e7-adbb-3c362794044a
@@ -119,6 +123,8 @@ A small back arrow returns to the previous in-app page. It is hidden on the home
 Mission text lives in TypeScript files under `src/data`, so the exhibit still renders when NASA’s image search is down.
 
 ## Getting started
+
+The public site is [https://nasaspaceappchallenge-rho.vercel.app/](https://nasaspaceappchallenge-rho.vercel.app/). To run a copy on your own computer:
 
 ```bash
 npm install
