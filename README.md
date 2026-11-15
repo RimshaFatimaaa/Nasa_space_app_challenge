@@ -4,6 +4,12 @@ An educational exhibit about the machines NASA left on the Moon and Mars. Studen
 
 Beyond Earth is a student project. It is not an official NASA website. It does not use the NASA logo, the NASA flag, or altered mission patches. Photographs are NASA images. Deep-space probes such as Voyager are not part of the exhibit.
 
+## Demo
+
+[Watch the screen recording](assets/screen_recording.mp4)
+
+<video src="assets/screen_recording.mp4" controls width="100%"></video>
+
 ## Features
 
 ### Home
